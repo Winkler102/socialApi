@@ -62,8 +62,6 @@ ThoughtSchema.virtual('reactionCount').get(function () {
     return this.reactions.length;
 });
 
-const Thought = model('Thought', ThoughtSchema);
-
 ReactionSchema.post("remove", document => {
     const reactionId = document._id;
     Thought.find({ reactions: { $in: [reactionId] } }).then(users => {
@@ -93,5 +91,7 @@ ThoughtSchema.post("remove", document => {
         );
     });
 });
+
+const Thought = model('Thought', ThoughtSchema);
 
 module.exports = Thought;
