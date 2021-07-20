@@ -19,7 +19,7 @@ An Api and Database created for a socail media site. This api can be used to cre
 
         npm start 
 
-[Example Video]()
+[Example Video](https://youtu.be/ouxMjVG_eiU)
 
 ## License
 
